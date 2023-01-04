@@ -3,7 +3,7 @@ import React from 'react';
 const ServiceCard = ({ card }) => {
     const { icon, title, description } = card;
     return (
-        <div className={`card w-96 shadow-xl mt-16 `}>
+        <div className={`card w-100 shadow-xl mt-16 `}>
             <figure className="px-10 pt-10">
                 <img src={icon} alt="Shoes" className="rounded-xl" />
             </figure>

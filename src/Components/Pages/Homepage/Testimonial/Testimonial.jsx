@@ -31,7 +31,7 @@ const Testimonial = () => {
         {
             id: 3,
             comment: "It is a long established fact that by the readable content of a lot layout. The point of using Lorem a more-or-less normal distribu to using Content here, content",
-            name: 'Winsone Harry',
+            name: 'Winsone peter',
             from: 'california',
             image: peopleThree
         },
@@ -48,38 +48,42 @@ const Testimonial = () => {
         <div className='mt-16'>
             <p className='text-xl text-teal-400'>Testimonial</p>
             <p className='text-2xl'>What Our Patients Says</p>
-                <Swiper
-                      
-                      breakpoints={
-                        {
-                            0:{
-                                slidesPerView:1,
-                                spaceBetween:10
-                            },
-                            480:{
-                                slidesPerView:2,
-                                spaceBetween:10
-                            },
-                            768:{
-                                slidesPerView:3,
-                                spaceBetween:10
-                            },
-                            1024:{
-                                slidesPerView:4,
-                                spaceBetween:10
-                            },
-                            
-                        }
-                      }
-                >
+            <Swiper
+                loop={true}
+                autoplay={{
+                    delay: 100,
+                    disableOnInteraction: false
+                }}
+                breakpoints={
                     {
-                        testimonialData.map(card =>{
-                             return <SwiperSlide><TestimonialCard key={card.id} card={card}></TestimonialCard></SwiperSlide>
-                            
-                            })
+                        0: {
+                            slidesPerView: 1,
+                            spaceBetween: 10
+                        },
+                        480: {
+                            slidesPerView: 2,
+                            spaceBetween: 10
+                        },
+                        768: {
+                            slidesPerView: 3,
+                            spaceBetween: 10
+                        },
+                        1024: {
+                            slidesPerView: 4,
+                            spaceBetween: 10
+                        },
+
                     }
-                    
-                </Swiper>
+                }
+            >
+                {
+                    testimonialData.map(card => {
+                        return <SwiperSlide><TestimonialCard key={card.id} card={card}></TestimonialCard></SwiperSlide>
+
+                    })
+                }
+
+            </Swiper>
         </div>
     );
 };

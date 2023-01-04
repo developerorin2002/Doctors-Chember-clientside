@@ -3,7 +3,7 @@ import React from 'react';
 const BusinessCard = ({ card }) => {
     const { icon, quotes, text ,bg } = card;
     return (
-        <div className={`card card-side shadow-xl ${bg} px-5`}>
+        <div className={`card card-side shadow-xl ${bg} px-5 w-100`}>
             <figure><img src={icon} alt="Movie" /></figure>
             <div className="card-body">
                 <h2 className="card-title text-white">{text}</h2>

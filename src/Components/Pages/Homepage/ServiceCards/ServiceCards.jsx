@@ -25,7 +25,7 @@ const ServiceCards = () => {
         }
     ]
     return (
-        <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 '>
+        <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4'>
             {
                 servicesCards.map(card =><ServiceCard key={card.id} card={card}></ServiceCard>)
             }
