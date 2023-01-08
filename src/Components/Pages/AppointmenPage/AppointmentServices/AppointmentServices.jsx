@@ -6,7 +6,6 @@ import Treatment from '../Treatments/Treatment';
 
 const AppointmentServices = ({date}) => {
     const mainDate = date;
-    console.log(date)
     const [services , setServices ] = useState([]);
     const [treatmentTaken,setTreatmentTaken] = useState(null);
 

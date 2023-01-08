@@ -1,14 +1,25 @@
 import React from 'react';
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../../Context/AuthProvider/Authprovider';
 
 const Header = () => {
+    const { user,userLogOut } = useContext(AuthContext)
     const allMenus = <React.Fragment>
         <li><Link to="/home">Home</Link></li>
         <li><Link to="/home">About</Link></li>
         <li><Link to="/appointment">Appointment</Link></li>
-        <li><Link to="/home">Reviews</Link></li>
         <li><Link to="/home">Contact us</Link></li>
-        <li><Link to="/login">Login</Link></li>
+
+        {
+            user && user.uid ? <><div className="avatar">
+                <div className="w-12 m-2 h-12 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                    <img alt='' src="https://placeimg.com/192/192/people" />
+                </div>
+            </div><button className='btn btn-primary mt-2 text-white' onClick={userLogOut}>LogOut</button></> : <><li><Link to="/register">Register</Link></li>
+                <li><Link to="/login">Login</Link></li></>
+        }
+        <li><Link to="/dashboard">Dashboard</Link></li>
     </React.Fragment>
     return (
         <div className="navbar">

@@ -77,9 +77,8 @@ const Testimonial = () => {
                 }
             >
                 {
-                    testimonialData.map(card => {
-                        return <SwiperSlide><TestimonialCard key={card.id} card={card}></TestimonialCard></SwiperSlide>
-
+                    testimonialData.map((card,index) => {
+                        return <SwiperSlide><TestimonialCard key={index} card={card}></TestimonialCard></SwiperSlide>
                     })
                 }
 

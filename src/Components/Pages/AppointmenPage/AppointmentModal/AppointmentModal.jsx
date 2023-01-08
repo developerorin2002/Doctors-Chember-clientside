@@ -2,7 +2,6 @@ import React from 'react';
 
 const AppointmentModal = ({ treatmentTaken, mainDate }) => {
     const { name, slots } = treatmentTaken;
-    console.log(mainDate)
     const handleBooking= (e) =>{
         e.preventDefault();
         const form = e.target;
